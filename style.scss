@@ -259,9 +259,6 @@ nav {
   border-bottom: none;
 }
 
-.entry {
- padding: 0 45px;
-
 .post {
   blockquote {
     margin: 1.8em .8em;
@@ -271,6 +268,9 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
+
+.pst {
+  padding: 0 45px;
 
   .comments {
     margin-top: 10px;
