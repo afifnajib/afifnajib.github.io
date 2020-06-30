@@ -272,10 +272,6 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-
-  article > .page {
-    padding: 0 45px;
-	}
 	
   .comments {
     margin-top: 10px;
@@ -298,6 +294,10 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.page {
+  padding: 0 45px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
