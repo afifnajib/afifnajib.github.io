@@ -116,6 +116,7 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  padding: 0 50px;
 }
 
 // Specify the color of the selection
@@ -257,6 +258,9 @@ nav {
   padding-bottom: 1em;
   border-bottom: none;
 }
+
+.entry {
+ padding: 0 45px;
 
 .post {
   blockquote {
