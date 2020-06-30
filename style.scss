@@ -260,6 +260,7 @@ nav {
 }
 
 .post {
+   padding: 0 45px;
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -268,10 +269,7 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-
-.post2 {
-  padding: 0 45px;
-
+	
   .comments {
     margin-top: 10px;
   }
