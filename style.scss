@@ -296,8 +296,8 @@ footer {
   text-align: center;
 }
 
-.page {
-  padding: 0 45px;
+div > .page {
+  padding: 0 45px !important;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
