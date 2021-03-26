@@ -23,30 +23,9 @@
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css">
 
-	<title>Hello, world!</title>
+	<title>I Don't Know</title>
 </head>
 <style type="text/css">
-.love {
-	display: inline-block !important;
-	position: relative !important;
-	top: .2em !important;
-	color: #e74c3c !important;
-	-webkit-transform: scale(.9);
-	-moz-transform: scale(.9);
-	transform: scale(.9)!important;
-	-webkit-animation: love .5s infinite linear alternate-reverse;
-	-moz-animation: love .5s infinite linear alternate-reverse;
-	animation: love .5s infinite linear alternate-reverse !important;
-}
-@-webkit-keyframes love {
-	to {-webkit-transform: scale(1.2) !important;}
-}
-@-moz-keyframes love {
-	to {-moz-transform: scale(1.2) !important;}
-}
-@keyframes love {
-	to {transform: scale(1.2) !important;}
-}
 .center {
 	margin: 0;
 	position: absolute;
@@ -128,15 +107,9 @@ html,body{
 }
 </style>
 <body>
-	<div class="center">
-		<h2>I Nggak Sayang Kamu &#128517;</h2>
-	</div>
 	<div class="bg_heart"></div>
 	<div id="content">
 		<div class="container">
-			<marquee>
-				<p class="text-center text-muted mt-5">sebernarnya males buat ini, tapi karna lagi gabut & yang kepikiran cuman ini doang, yaudah deh..Sambil Belajar Juga</p>
-			</marquee>
 			<div class="center">
 				<button class="btn btn-primary btn-lg btn-block py-4 px-5" onclick="funcGabut()">Jangan di Klik</button>
 			</div>
@@ -145,12 +118,13 @@ html,body{
 
 			<!-- Copyright -->
 			<div class="footer-copyright text-center py-3 text-primary"><small> Made with
-				<i class="love fas fa-heart text-danger"></i> by A
+				<i class="fas fa-heart text-danger"></i> by A
 			</div>
 			<!-- Copyright -->
 
 		</footer>
 	</div>
+	<div class="center" id="ss"></div>
 	
 
 	<!-- Optional JavaScript -->
@@ -158,140 +132,141 @@ html,body{
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("h2").hide();
-			$(".love").click(function(){
-				$("#content").hide();
-				$(".bg-heart").show();
-				$("h2").show();
-				var love = setInterval(function() {
-					var r_num = Math.floor(Math.random() * 40) + 1;
-					var r_size = Math.floor(Math.random() * 65) + 10;
-					var r_left = Math.floor(Math.random() * 100) + 1;
-					var r_bg = Math.floor(Math.random() * 25) + 100;
-					var r_time = Math.floor(Math.random() * 5) + 5;
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#ss").hide();
+		$(".love").click(function(){
+			$("#content").hide();
+			$(".bg-heart").show();
+			$("#ss").show();
+			$("#ss").html("<h2>I Nggak Sayang Kamu &#128517;</h2>");
+			var love = setInterval(function() {
+				var r_num = Math.floor(Math.random() * 40) + 1;
+				var r_size = Math.floor(Math.random() * 65) + 10;
+				var r_left = Math.floor(Math.random() * 100) + 1;
+				var r_bg = Math.floor(Math.random() * 25) + 100;
+				var r_time = Math.floor(Math.random() * 5) + 5;
 
-					$('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+				$('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
 
-					$('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
+				$('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
 
-					$('.heart').each(function() {
-						var top = $(this).css("top").replace(/[^-\d\.]/g, '');
-						var width = $(this).css("width").replace(/[^-\d\.]/g, '');
-						if (top <= -100 || width >= 150) {
-							$(this).detach();
-						}
-					});
-				}, 100);
-			});
+				$('.heart').each(function() {
+					var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+					var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+					if (top <= -100 || width >= 150) {
+						$(this).detach();
+					}
+				});
+			}, 100);
 		});
-		function funcGabut() {
-			Swal.fire({
-				title: `Hallo Calonku`,
-				text: 'Aku Punya Pertanyaan Nih Buat Kamu',
-				icon: 'question',
-				showCancelButton: false,
-				confirmButtonColor: '#3085d6',
-				confirmButtonText: 'OK',
-			}).then((result) => {
-				Swal.fire(
-					'Jawab Yang Jujur Yaa..Ku Juga Nggak Bakalan Tau Kok Jawabanmu'
-					).then(()=>{
+	});
+	function funcGabut() {
+		Swal.fire({
+			title: `Hallo Calonku`,
+			text: 'Aku Punya Pertanyaan Nih Buat Kamu',
+			icon: 'question',
+			showCancelButton: false,
+			confirmButtonColor: '#3085d6',
+			confirmButtonText: 'OK',
+		}).then((result) => {
+			Swal.fire(
+				'Jawab Yang Jujur Yaa..Ku Juga Nggak Bakalan Tau Kok Jawabanmu'
+				).then(()=>{
+					Swal.fire({
+						title: 'Masukkin Nama Kamu Dulu',
+						input: 'text',
+						showCancelButton: true,
+						confirmButtonColor: '#3085d6',
+						cancelButtonColor: '#d33',
+						confirmButtonText: 'OK',
+						focusConfirm: false,
+						customClass: {
+							validationMessage: 'my-validation-message'
+						},
+						preConfirm: (value) => {
+							if (!value) {
+								Swal.showValidationMessage(
+									'Namanya di Isi Dulu Dong'
+									)
+							}
+							const nama = Swal.getPopup().querySelector('.swal2-input').value
+							return { nama: nama }
+						}
+					}).then((result) => {
+						var nama = result.value.nama;
 						Swal.fire({
-							title: 'Masukkin Nama Kamu Dulu',
-							input: 'text',
+							title: `${nama} sayang nggak sama doi ?`.trim(),
 							showCancelButton: true,
 							confirmButtonColor: '#3085d6',
 							cancelButtonColor: '#d33',
-							confirmButtonText: 'OK',
-							focusConfirm: false,
-							customClass: {
-								validationMessage: 'my-validation-message'
-							},
-							preConfirm: (value) => {
-								if (!value) {
-									Swal.showValidationMessage(
-										'Namanya di Isi Dulu Dong'
-										)
-								}
-								const nama = Swal.getPopup().querySelector('.swal2-input').value
-								return { nama: nama }
-							}
+							confirmButtonText: 'Sayang Dong',
+							cancelButtonText: 'Nggak'
 						}).then((result) => {
-							var nama = result.value.nama;
-							Swal.fire({
-								title: `${nama} sayang nggak sama doi ?`.trim(),
-								showCancelButton: true,
-								confirmButtonColor: '#3085d6',
-								cancelButtonColor: '#d33',
-								confirmButtonText: 'Sayang Dong',
-								cancelButtonText: 'Nggak'
-							}).then((result) => {
-								if (result.isConfirmed) {
-									Swal.fire(`Ooh, Thanks &#128522;`).then(()=>{
-										Swal.fire({
-											title: 'Seberapa Sayang Emangnya ?',
-											html: `<label class="form-label" for="customRange1">Antara 1 - 100 Ya</label><div class="range"><form name="rangeForm"><input type="range" class="form-range" name="rangeInputId" id="rangeInputId" value="50" min="1" max="100" oninput="rangeOutputId.value = rangeInputId.value"><output name="rangeOutputId" id="rangeOutputId">50</output> %</form></div>`,
-											icon: 'question',
-											showCancelButton: false,
-											confirmButtonColor: '#3085d6',
-											confirmButtonText: 'OK',
-											preConfirm: () => {
-												const rangeInputId = Swal.getPopup().querySelector('#rangeInputId').value
-												return { rangeInputId: rangeInputId }
-											}
-										}).then((result) => {
-											Swal.fire(`Oohh, &#128528; <br>Makasih Yaa Udah Ngasi ${result.value.rangeInputId} %`.trim()).then(()=>{
-												Swal.fire({
-													title: `Sekarang ${nama} kangen nggak sama doi ?`.trim(),
-													showCancelButton: true,
-													confirmButtonColor: '#3085d6',
-													cancelButtonColor: '#d33',
-													confirmButtonText: 'Kangen Dong',
-													cancelButtonText: 'Nggak!'
-												}).then((result) => {
-													if (result.isConfirmed) {
-														Swal.fire(
-															`Ooh &#128528; <br>(Dalem Hati: '...Ku Juga Kangen') `,
-															).then(()=>{
-																Swal.fire({
-																	title: `Terakhir Yaa <span>&#128522;</span>`,
-																	showCancelButton: false,
-																	confirmButtonColor: '#3085d6',
-																	confirmButtonText: 'OK',
-																}).then((result) => {
-																	Swal.fire(
-																		'Coba Klik Icon Hati di Paling Bawah Dong (ini baru ku nyuruh klikk)'
-																		)
-																})
+							if (result.isConfirmed) {
+								Swal.fire(`Ooh, Thanks &#128522;`).then(()=>{
+									Swal.fire({
+										title: 'Seberapa Sayang Emangnya ?',
+										html: `<label class="form-label" for="customRange1">Antara 1 - 100 Ya</label><div class="range"><form name="rangeForm"><input type="range" class="form-range" name="rangeInputId" id="rangeInputId" value="50" min="1" max="100" oninput="rangeOutputId.value = rangeInputId.value"><output name="rangeOutputId" id="rangeOutputId">50</output> %</form></div>`,
+										icon: 'question',
+										showCancelButton: false,
+										confirmButtonColor: '#3085d6',
+										confirmButtonText: 'OK',
+										preConfirm: () => {
+											const rangeInputId = Swal.getPopup().querySelector('#rangeInputId').value
+											return { rangeInputId: rangeInputId }
+										}
+									}).then((result) => {
+										Swal.fire(`Oohh,&#128528; <br>Makasih Yaa Udah Ngasi ${result.value.rangeInputId} %`.trim()).then(()=>{
+											Swal.fire({
+												title: `Sekarang ${nama} kangen nggak sama doi ?`.trim(),
+												showCancelButton: true,
+												confirmButtonColor: '#3085d6',
+												cancelButtonColor: '#d33',
+												confirmButtonText: 'Kangen Dong',
+												cancelButtonText: 'Nggak!'
+											}).then((result) => {
+												if (result.isConfirmed) {
+													Swal.fire(
+														`Ooh &#128528; <br>(Dalem Hati: '...Ku Juga Kangen') `,
+														).then(()=>{
+															Swal.fire({
+																title: `Terakhir Yaa &#128522;`,
+																showCancelButton: false,
+																confirmButtonColor: '#3085d6',
+																confirmButtonText: 'OK',
+															}).then((result) => {
+																Swal.fire(
+																	'Coba Klik Icon Hati di Paling Bawah Dong (ini baru ku nyuruh klikk)'
+																	)
 															})
-														} else if (
-															/* Read more about handling dismissals below */
-															result.dismiss === Swal.DismissReason.cancel
-															) {
-															Swal.fire(
-																`Iihh, Jahat Banget Padahal... Kita Kan Emang Nggak Pacaran &#128517; `,
-																'error'
-																).then(()=>{
-																	Swal.fire(`Yaudalah..BYE &#129296;`);
-																})
-															}
 														})
-											})
+													} else if (
+														/* Read more about handling dismissals below */
+														result.dismiss === Swal.DismissReason.cancel
+														) {
+														Swal.fire(
+															`Iihh, Jahat Banget Padahal... Kita Kan Emang Nggak Pacaran &#128517; `,
+															'error'
+															).then(()=>{
+																Swal.fire(`Yaudalah..BYE &#129296;`);
+															})
+														}
+													})
 										})
 									})
-								} else if (result.dismiss === Swal.DismissReason.cancel) {
-									Swal.fire(`Iihh, Jahat &#128544;`).then(()=>{
-										Swal.fire(`Yaudalah..BYE &#129296;`);
-									})
-								}
-							})
+								})
+							} else if (result.dismiss === Swal.DismissReason.cancel) {
+								Swal.fire(`Iihh, Jahat &#128544;`).then(()=>{
+									Swal.fire(`Yaudalah..BYE &#129296;`);
+								})
+							}
 						})
 					})
 				})
-		}
+			})
+	}
 
-	</script>
-</body>
-</html>
+</script>
