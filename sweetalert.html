@@ -26,6 +26,26 @@
 	<title>I Don't Know</title>
 </head>
 <style type="text/css">
+.love {
+	display: inline-block !important;
+	position: relative !important;
+	color: #e74c3c !important;
+	-webkit-transform: scale(.9);
+	-moz-transform: scale(.9);
+	transform: scale(.9)!important;
+	-webkit-animation: love .5s infinite linear alternate-reverse;
+	-moz-animation: love .5s infinite linear alternate-reverse;
+	animation: love .5s infinite linear alternate-reverse !important;
+}
+@-webkit-keyframes love {
+	to {-webkit-transform: scale(1.2) !important;}
+}
+@-moz-keyframes love {
+	to {-moz-transform: scale(1.2) !important;}
+}
+@keyframes love {
+	to {transform: scale(1.2) !important;}
+}
 .center {
 	margin: 0;
 	position: absolute;
@@ -118,7 +138,7 @@ html,body{
 
 			<!-- Copyright -->
 			<div class="footer-copyright text-center py-3 text-primary"><small> Made with
-				<i class="fas fa-heart text-danger"></i> by A
+				<i class="love fas fa-heart text-danger"></i> by A
 			</div>
 			<!-- Copyright -->
 
