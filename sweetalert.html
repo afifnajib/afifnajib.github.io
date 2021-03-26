@@ -183,7 +183,7 @@ html,body{
 							$(this).detach();
 						}
 					});
-				}, 500);
+				}, 300);
 			});
 		});
 		function funcGabut() {
@@ -242,7 +242,7 @@ html,body{
 												return { rangeInputId: rangeInputId }
 											}
 										}).then((result) => {
-											Swal.fire(`Oohh, <span>&#128528;</span>Makasih Yaa Udah Ngasi ${result.value.rangeInputId} %`.trim()).then(()=>{
+											Swal.fire(`Oohh, &#128528; Makasih Yaa Udah Ngasi ${result.value.rangeInputId} %`.trim()).then(()=>{
 												Swal.fire({
 													title: `Sekarang ${nama} kangen nggak sama doi ?`.trim(),
 													showCancelButton: true,
@@ -253,7 +253,7 @@ html,body{
 												}).then((result) => {
 													if (result.isConfirmed) {
 														Swal.fire(
-															`Ooh <span>&#128528;</span> (Dalem Hati: '...Ku Juga Kangen') `,
+															`Ooh &#128528; (Dalem Hati: '...Ku Juga Kangen') `,
 															).then(()=>{
 																Swal.fire({
 																	title: `Terakhir Yaa <span>&#128522;</span>`,
